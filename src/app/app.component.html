@@ -11,17 +11,14 @@
       </div>
     </div>
     <div class="header__nav container-row">
-      <div class="header__nav-search">Search</div>
-      <div class="header__nav-mylist">My List</div>
+      <div routerLink="/search" routerLinkActive="active" class="header__nav-search">Search</div>
+      <div routerLink="/mylist" routerLinkActive="active" class="header__nav-mylist">My List</div>
     </div>
   </div>
-  <div>
-    Загрузка...
-  </div>
+  <router-outlet></router-outlet>
   <div class="footer">
     <div class="footer__text">copyright @lodossteam 2018</div>
   </div>
 </div>
 
 
-<router-outlet></router-outlet>
