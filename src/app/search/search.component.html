@@ -1,23 +1,48 @@
 <div class="main">
-  <form class="search">
-    <select class="search__select1">
-      <option>Repositories</option>
-      <option>type</option>
-    </select>
-    <select class="search__select2">
-      <option>javascript</option>
-      <option>css</option>
-      <option>html</option>
-      <option>php</option>
-      <option>c++</option>
-      <option>python</option>
-      <option>c#</option>
-      <option>java</option>
-      <option>go</option>
-      <option>haskel</option>
-    </select>
-    <input class="search__input" type="text" >Repositories
-    <button class="search__button">SEARCH</button>
-  </form>
-</div>
+  <div class=" search container-row">
+    <div>
+      <mat-form-field>
+        <mat-select [(value)]="selected1">
+          <mat-option>None</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-select [(value)]="selected2">
+          <mat-option>None</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Favorite food" value="Sushi">
+      </mat-form-field>
+    </div>
+    <div class="example-button-row">
+      <button mat-raised-button color="primary">Primary</button>
+    </div>
+  </div>
+  <span class="mdi mdi-view-grid"></span>
 
+  <i class="material-icons">
+    border_all
+  </i>
+  <i class="material-icons">
+    apps
+  </i>
+  <i class="material-icons">
+    menu
+  </i>
+  <i class="material-icons">
+    dehaze
+  </i>
+
+
+</div>

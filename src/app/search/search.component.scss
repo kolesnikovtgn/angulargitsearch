@@ -3,8 +3,28 @@
   margin: 0 auto;
 }
 
-.search {
-  &__select1 {
-
+.container {
+  &-column {
+    display: flex;
+    flex-direction: column;
+  }
+  &-row {
+    display: flex;
+    flex-direction: row;
   }
 }
+
+.search {
+  justify-content: space-between;
+}
+
+.input-theme{
+  border-bottom-color: #0366D6;
+}
+
+//.material-icons .md-light {
+//  color: #3C4146;
+//}
+//.material-icons .md-light .md-inactive{
+//  color: black;
+//}
