@@ -7,12 +7,14 @@ import { SearchComponent } from './search/search.component';
 import { MylistComponent } from './mylist/mylist.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    MylistComponent
+    MylistComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

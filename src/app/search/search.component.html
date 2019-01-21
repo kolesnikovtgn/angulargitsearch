@@ -1,18 +1,16 @@
 <div class="main">
   <div class="search container-row">
     <select class="search__rep">
-      <option></option>
-      <option>Пункт 1</option>
-      <option>Пункт 2</option>
+      <option>Type</option>
+      <option>Repositories</option>
     </select>
     <select class="search__lang">
-      <option></option>
-      <option>Пункт 1</option>
-      <option>Пункт 2</option>
+      <option *ngFor="let item of langArray">{{item}}</option>
     </select>
-    <input  class="search__input" type="text" >
+    <input  class="search__input" placeholder="Type here for search" type="text" >
     <div class="q">
       <button class="search__btn"><p class="search__btn-text">SEARCH</p></button>
     </div>
   </div>
+  <app-list></app-list>
 </div>
