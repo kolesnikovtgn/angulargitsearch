@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BlockComponent } from '../block/block.component';
+import { LineComponent } from '../line/line.component';
 
 @Component({
   selector: 'app-list',
@@ -6,9 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-
   constructor() { }
-
   ngOnInit() {
   }
 
