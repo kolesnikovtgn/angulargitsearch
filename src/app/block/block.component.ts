@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Repo } from '../repo';
 
 @Component({
   selector: 'app-block',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlockComponent implements OnInit {
 
+  @Input() repositories: Repo[] = [];
   constructor() { }
 
   ngOnInit() {
   }
-
 }

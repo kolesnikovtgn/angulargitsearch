@@ -1,17 +1,17 @@
 <div class="prj container-column">
   <div class="prj__rating container-row">
-    <div class="prj__rating-language">Javascript</div>
+    <div class="prj__rating-language">{{repositories.language}}</div>
     <div class="prj__rating-block container-row">
       <img class="prj__rating-block-img" src="../../assets/star.png">
-      <div class="prj__rating-block-stars">25k</div>
+      <div class="prj__rating-block-stars">{{repositories.stargazers_count}}</div>
     </div>
   </div>
   <div class="prj__text container-column">
     <div class="prj__text-name">
-      TryGhost/Ghost
+      {{repositories.name}}
     </div>
     <div class="prj__text-describe">
-      The platform for professional publishers
+      {{repositories.description}}
     </div>
     <div class="prj__text-taglist container-row">
       <div class="prj__text-taglist-tag">

@@ -8,13 +8,9 @@
     </span>
   </div>
   <div *ngIf="condition" class="list">
-    <app-block></app-block>
-    <app-block></app-block>
+    <app-block *ngFor="let rep of repos" [repositories] = "rep"></app-block>
   </div>
   <div *ngIf="!condition" class="list">
-    <app-line></app-line>
+    <app-line *ngFor="let rep of repos" [repositories] = "rep"></app-line>
   </div>
- <ul>
-   <li *ngFor=" let item of repos ">{{item.name}}</li>
- </ul>
 </div>

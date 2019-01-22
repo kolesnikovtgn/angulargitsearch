@@ -6,10 +6,10 @@
   </div>
   <div class="project__text container-column">
     <div class="project__text-name">
-      TryChost/Ghost
+      {{repositories.name}}
     </div>
     <div class="project__text-describe">
-      The platform for professional publishers
+      {{repositories.description}}
     </div>
     <div class="project__text-taglist container-row">
       <div class="project__text-taglist-tag">
@@ -23,44 +23,10 @@
   <div class="project__rating container-column">
     <div class="project__rating-block container-row">
       <img  class="project__rating-block-img" src="../../assets/star.png">
-      <div class="project__rating-block-stars">25k</div>
+      <div class="project__rating-block-stars">{{repositories.stargazers_count}}</div>
     </div>
     <div class="project__rating-language">
-      Javascript
-    </div>
-  </div>
-</div>
-
-
-<div class="project container-row">
-  <div class="project__checkimage">
-    <div class="project__checkimage-square">
-      <div class="project__checkimage-image"> </div>
-    </div>
-  </div>
-  <div class="project__text container-column">
-    <div class="project__text-name">
-      TryChost/Ghost
-    </div>
-    <div class="project__text-describe">
-      The platform for professional publishers
-    </div>
-    <div class="project__text-taglist container-row">
-      <div class="project__text-taglist-tag">
-        Javascript
-      </div>
-      <div class="project__text-taglist-tag">
-        cms
-      </div>
-    </div>
-  </div>
-  <div class="project__rating container-column">
-    <div class="project__rating-block container-row">
-      <img  class="project__rating-block-img" src="../../assets/star.png">
-      <div class="project__rating-block-stars">25k</div>
-    </div>
-    <div class="project__rating-language">
-      Javascript
+      {{repositories.language}}
     </div>
   </div>
 </div>

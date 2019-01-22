@@ -11,7 +11,7 @@ import { Repo } from '../repo';
   providers: [RepositoriesService]
 })
 export class ListComponent implements OnInit {
-  @Input()repos: Repo[] = [];
+  repos: Repo[] = [];
   condition = true;
   constructor(private repositoriesService: RepositoriesService) { }
   ngOnInit() {

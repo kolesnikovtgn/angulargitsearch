@@ -12,9 +12,9 @@
 .project {
   height: 164px;
   border-bottom: 1px solid #E1E4E8;
-  &:last-child {
-    border-bottom: none;
-  }
+  //&:last-child {
+  //  border-bottom: none;
+  //}
   &__checkimage {
     margin-top: 33px;
     &-square {
@@ -38,6 +38,9 @@
       color: #0366D6;
     }
     &-describe {
+      width: 272px;
+      height: 17px;
+      overflow: hidden;
       font-size: 1.45rem;
       margin-top: 4px;
     }
