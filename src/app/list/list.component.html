@@ -1,18 +1,20 @@
 <div class="main">
   <div class="main__menu">
-    <span class="main__menu-block">
+    <span class="main__menu-block" (click)="condition = true" [ngClass]="{active: condition}">
       <i class="fas fa-th-large fa-3x"></i>
     </span>
-    <span class="main__menu-list">
+    <span class="main__menu-list" (click)="condition = false" [ngClass]="{active: !condition}">
       <i class="fas fa-bars fa-3x"></i>
     </span>
   </div>
-  <div class="list">
-
-  <app-block></app-block>
-  <app-block></app-block>
-
-  <app-line></app-line>
-
+  <div *ngIf="condition" class="list">
+    <app-block></app-block>
+    <app-block></app-block>
   </div>
+  <div *ngIf="!condition" class="list">
+    <app-line></app-line>
+  </div>
+ <ul>
+   <li *ngFor=" let item of repos ">{{item.name}}</li>
+ </ul>
 </div>

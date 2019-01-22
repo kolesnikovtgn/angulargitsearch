@@ -25,17 +25,17 @@
   margin: 27px 12px 0 0;
 }
 
-.main__menu-block:focus {
+.active {
   color: #3C4146;
+}
+
+.not-active {
+  color: #E0E0E0;
 }
 
 .main__menu-list {
   color: #E0E0E0;
   margin-top: 27px;
-}
-
-.main__menu-list:active {
-  color: #3C4146;
 }
 
 .list {
