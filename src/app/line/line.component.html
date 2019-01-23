@@ -1,7 +1,8 @@
 <div class="project container-row">
   <div class="project__checkimage">
     <div class="project__checkimage-square">
-      <div class="project__checkimage-image"> </div>
+      <div *ngIf="repositories.myList" (click)="toggleMyLine(repositories)" class="project__checkimage-image enable"> </div>
+      <div *ngIf="!repositories.myList" (click)="toggleMyLine(repositories)" class="project__checkimage-image disable"> </div>
     </div>
   </div>
   <div class="project__text container-column">

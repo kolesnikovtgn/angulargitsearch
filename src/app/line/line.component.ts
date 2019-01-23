@@ -14,4 +14,7 @@ export class LineComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleMyLine(rep) {
+    rep.myList = !rep.myList;
+  }
 }

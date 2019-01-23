@@ -25,6 +25,10 @@
   margin: 27px 12px 0 0;
 }
 
+.main__menu-block:checked {
+  color: #3C4146;
+}
+
 .active {
   color: #3C4146;
 }
@@ -36,6 +40,10 @@
 .main__menu-list {
   color: #E0E0E0;
   margin-top: 27px;
+}
+
+.main__menu-list:checked {
+  color: #3C4146;
 }
 
 .list {

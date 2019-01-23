@@ -9,6 +9,14 @@
   }
 }
 
+.disable {
+  background-color: #FFFFFF;
+}
+
+.enable {
+  background-color: #0366D6;
+}
+
 .project {
   height: 164px;
   border-bottom: 1px solid #E1E4E8;
@@ -27,7 +35,6 @@
       width: 10px;
       height: 10px;
       margin: 4px 4px 4px 4px;
-      background-color: #0366D6;
     }
   }
   &__text {
@@ -39,7 +46,7 @@
     }
     &-describe {
       width: 272px;
-      height: 17px;
+      height: 19px;
       overflow: hidden;
       font-size: 1.45rem;
       margin-top: 4px;

@@ -42,6 +42,9 @@
       font-weight: bold;
     }
     &-describe {
+      width: 272px;
+      height: 19px;
+      overflow: hidden;
       color: #000000;
       margin: 3px 0 0 2px;
       font-size: 1.45rem;
@@ -78,7 +81,6 @@
       }
     }
     &-delete {
-      display: none;
       margin-left: 115px;
       width: 181px;
       height: 36px;

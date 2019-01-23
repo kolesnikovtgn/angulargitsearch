@@ -13,6 +13,7 @@ import { Repo } from '../repo';
 export class ListComponent implements OnInit {
   repos: Repo[] = [];
   condition = true;
+
   constructor(private repositoriesService: RepositoriesService) { }
   ngOnInit() {
     this.repositoriesService.getRepo().subscribe(data => { this.repos = data; console.log(this.repos); });
@@ -21,5 +22,4 @@ export class ListComponent implements OnInit {
   onChanged(event) {
     this.condition = event;
   }
-
 }
