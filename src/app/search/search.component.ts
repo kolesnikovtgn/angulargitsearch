@@ -15,5 +15,4 @@ export class SearchComponent implements OnInit {
     'java', 'go', 'haskel'];
   ngOnInit() {
   }
-
 }

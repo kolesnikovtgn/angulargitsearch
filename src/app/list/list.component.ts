@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 import { BlockComponent } from '../block/block.component';
 import { LineComponent } from '../line/line.component';
 import { RepositoriesService } from '../repositories.service';
@@ -15,11 +15,12 @@ export class ListComponent implements OnInit {
   condition = true;
 
   constructor(private repositoriesService: RepositoriesService) { }
+
   ngOnInit() {
-    this.repositoriesService.getRepo().subscribe(data => { this.repos = data; console.log(this.repos); });
+    this.getData();
   }
 
-  onChanged(event) {
-    this.condition = event;
+  getData() {
+    this.repositoriesService.getRepo().subscribe(data => { this.repos = data; console.log(this.repos); });
   }
 }
