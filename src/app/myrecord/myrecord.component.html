@@ -1,0 +1,16 @@
+<div class="main">
+  <div class="main__menu" ngInit="selectedTab='block'">
+    <span class="main__menu-block" (click)="condition = true">
+      <i class="fas fa-th-large fa-3x"></i>
+    </span>
+    <span class="main__menu-list" (click)="condition = false">
+      <i class="fas fa-bars fa-3x"></i>
+    </span>
+  </div>
+  <div *ngIf="condition" class="list">
+    <app-block *ngFor="let rep of repos" [repositories] = "rep"></app-block>
+  </div>
+  <div *ngIf="!condition" class="list">
+    <app-line *ngFor="let rep of repos" [repositories] = "rep"></app-line>
+  </div>
+</div>

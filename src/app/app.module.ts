@@ -12,6 +12,7 @@ import { MaterialModule } from './material';
 import { ListComponent } from './list/list.component';
 import { BlockComponent } from './block/block.component';
 import { LineComponent } from './line/line.component';
+import { MyrecordComponent } from './myrecord/myrecord.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LineComponent } from './line/line.component';
     MylistComponent,
     ListComponent,
     BlockComponent,
-    LineComponent
+    LineComponent,
+    MyrecordComponent
   ],
   imports: [
     BrowserModule,

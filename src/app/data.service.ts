@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Repo } from './repo';
-import { Observable } from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 import { map, filter } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { RepositoriesService } from './repositories.service';
@@ -11,15 +11,22 @@ import { RepositoriesService } from './repositories.service';
 })
 export class DataService {
 
-  repos: Observable<Repo[]>;
+  private repos: BehaviorSubject<Repo[]> = new BehaviorSubject([]);
 
   constructor(private http: HttpClient, private repositoriesService: RepositoriesService) { }
 
-  getData(): void {
-    this.repositoriesService.getRepo().subscribe(data => this.repos = data);
+  getData(): any {
+    this.repositoriesService.getRepo().subscribe((data: Repo[]) => this.repos.next(data));
   }
 
   getRepos(): Observable<Repo[]> {
     return this.repos;
   }
+
+  toggleRepo(repo: Repo): void {
+    repo.myList = !repo.myList;
+  }
+  // deleteRepo(repo: Repo): void {
+  //   this.repos.map();
+  // }
 }
