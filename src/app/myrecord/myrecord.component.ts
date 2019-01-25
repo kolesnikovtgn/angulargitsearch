@@ -21,7 +21,9 @@ export class MyrecordComponent implements OnInit {
   }
 
   getData() {
-    this.dataService.getRepos().subscribe(data => this.repos = data.filter(el => el.myList === true));
-    console.log('myList is ', this.repos);
+    this.dataService.getRepos().subscribe(data => {
+      this.repos = data.filter(el => el.myList === true);
+      console.log('myList is ', this.repos);
+    });
   }
 }
