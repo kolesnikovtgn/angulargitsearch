@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="prj__button container-column">
-    <button *ngIf="repositories.myList" (click)="toggleMyBlock(repositories)" class="prj__button-add"><p class="prj__button-add-text">ADD TO LIST</p></button>
-    <button *ngIf="!repositories.myList" (click)="toggleMyBlock(repositories)" class="prj__button-delete"><p class="prj__button-delete-text"> REMOVE FROM LIST</p></button>
+    <button *ngIf="!repositories.myList" (click)="toggleMyBlock(repositories)" class="prj__button-add"><p class="prj__button-add-text">ADD TO LIST</p></button>
+    <button *ngIf="repositories.myList" (click)="toggleMyBlock(repositories)" class="prj__button-delete"><p class="prj__button-delete-text"> REMOVE FROM LIST</p></button>
   </div>
 </div>

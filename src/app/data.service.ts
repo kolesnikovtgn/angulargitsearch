@@ -15,8 +15,8 @@ export class DataService {
 
   constructor(private http: HttpClient, private repositoriesService: RepositoriesService) { }
 
-  getData(): any {
-    this.repositoriesService.getRepo().subscribe((data: Repo[]) => this.repos.next(data));
+  getData(type, language, query): any {
+    this.repositoriesService.getRepo(type, language, query).subscribe((data: Repo[]) => this.repos.next(data));
   }
 
   getRepos(): Observable<Repo[]> {

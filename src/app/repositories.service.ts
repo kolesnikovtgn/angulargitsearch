@@ -12,8 +12,8 @@ export class RepositoriesService {
   constructor(private http: HttpClient) { }
 
   autorization = { 'Authorization': 'Basic -u kolesnikovtgn:93e92c2a74aa92e55cc5bfd9b3728901cf2258bb'};
-  getRepo(): Observable<Repo[]> {
-    return this.http.get('https://api.github.com/search/repositories?q=cms+language:javascript',
+  getRepo(type, language, query): Observable<Repo[]> {
+    return this.http.get(`https://api.github.com/search/${type}?q=${query}+language:${language}`,
       { headers: this.autorization }).pipe(
       map(data => {
         const repoList = data['items'];

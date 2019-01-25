@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { ListComponent } from '../list/list.component';
 import { DataService } from '../data.service';
 
@@ -8,8 +8,12 @@ import { DataService } from '../data.service';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
+  type = 'repositories';
+  language: string;
+  query: string;
+
   constructor(private dataService: DataService) { }
-  langArray: string[] = ['Javascript', 'css', 'html',
+  langArray: string[] = ['javascript', 'css', 'html',
     'php', 'ruby', 'c++', 'python', 'c#',
     'java', 'go', 'haskel'];
 
@@ -17,6 +21,6 @@ export class SearchComponent implements OnInit {
   }
 
   clickSearch() {
-    this.dataService.getData();
+    this.dataService.getData(this.type, this.language, this.query);
   }
 }
