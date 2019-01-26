@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Repo } from '../repo';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-line',
@@ -8,13 +9,13 @@ import { Repo } from '../repo';
 })
 export class LineComponent implements OnInit {
 
-  constructor() { }
+  constructor(private  dataService: DataService) { }
 
   @Input() repositories: Repo[] = [];
   ngOnInit() {
   }
 
   toggleMyLine(rep) {
-    rep.myList = !rep.myList;
+    this.dataService.toggleRepo(rep);
   }
 }

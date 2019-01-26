@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, DoCheck } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Repo } from '../repo';
 import { DataService } from '../data.service';
 
@@ -7,7 +7,7 @@ import { DataService } from '../data.service';
   templateUrl: './block.component.html',
   styleUrls: ['./block.component.scss']
 })
-export class BlockComponent implements OnInit, DoCheck {
+export class BlockComponent implements OnInit {
 
   @Input() repositories: Repo[] = [];
   constructor(private dataService: DataService) { }
@@ -16,11 +16,7 @@ export class BlockComponent implements OnInit, DoCheck {
 
   }
 
-  ngDoCheck() {
-  }
-
   toggleMyBlock(rep) {
-      // rep.myList = !rep.myList;
     this.dataService.toggleRepo(rep);
   }
 }

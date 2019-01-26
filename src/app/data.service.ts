@@ -20,13 +20,11 @@ export class DataService {
   }
 
   getRepos(): Observable<Repo[]> {
-    return this.repos;
+    return this.repos.asObservable();
   }
 
   toggleRepo(repo: Repo): void {
     repo.myList = !repo.myList;
+    this.repos.next(this.repos.getValue());
   }
-  // deleteRepo(repo: Repo): void {
-  //   this.repos.map();
-  // }
 }
