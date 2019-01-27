@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { BlockComponent } from '../block/block.component';
 import { LineComponent } from '../line/line.component';
 import { DataService } from '../data.service';

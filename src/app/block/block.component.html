@@ -14,11 +14,11 @@
       {{repositories.description}}
     </div>
     <div class="prj__text-taglist container-row">
-      <div class="prj__text-taglist-tag">
-        Javascript
+      <div *ngIf="repositories.langSearch" class="prj__text-taglist-tag">
+        {{repositories.langSearch}}
       </div>
-      <div class="prj__text-taglist-tag">
-        cms
+      <div *ngIf="repositories.querySearch" class="prj__text-taglist-tag">
+        {{repositories.querySearch}}
       </div>
     </div>
   </div>

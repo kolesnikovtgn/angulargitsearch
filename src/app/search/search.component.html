@@ -5,6 +5,7 @@
       <option>repositories</option>
     </select>
     <select [(ngModel)]="language" class="search__lang">
+      <option [ngValue]="undefined" hidden selected>Language</option>
       <option *ngFor="let item of langArray">{{item}}</option>
     </select>
     <input [(ngModel)]="query" class="search__input" placeholder="Type here for search" type="text">

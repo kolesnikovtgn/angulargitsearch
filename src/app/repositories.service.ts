@@ -19,7 +19,8 @@ export class RepositoriesService {
         const repoList = data['items'];
         return repoList.map((repo: any) => {
           return { id: repo.id, name: repo.name, description: repo.description,
-            language: repo.language, stargazers_count: repo.stargazers_count, searchLanguage: repo.searchLanguage, myList: false };
+            language: repo.language, stargazers_count: repo.stargazers_count,
+            searchLanguage: repo.searchLanguage, myList: false, langSearch: language, querySearch: query };
         });
       }),
     );

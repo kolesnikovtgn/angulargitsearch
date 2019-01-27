@@ -14,10 +14,10 @@
     </div>
     <div class="project__text-taglist container-row">
       <div class="project__text-taglist-tag">
-        Javascript
+        {{repositories.langSearch}}
       </div>
-      <div class="project__text-taglist-tag">
-        cms
+      <div *ngIf="repositories.querySearch" class="project__text-taglist-tag">
+        {{repositories.querySearch}}
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@
       <img  class="project__rating-block-img" src="../../assets/star.png">
       <div class="project__rating-block-stars">{{repositories.stargazers_count}}</div>
     </div>
-    <div class="project__rating-language">
+    <div *ngIf="repositories.langSearch" class="project__rating-language">
       {{repositories.language}}
     </div>
   </div>

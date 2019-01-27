@@ -1,9 +1,9 @@
 <div class="main">
   <div class="main__menu" ngInit="selectedTab='block'">
-    <span class="main__menu-block" (click)="condition = true">
+    <span class="main__menu-block" [ngClass]="{ 'active': condition, 'not-active': !condition }" (click)="condition = true">
       <i class="fas fa-th-large fa-3x"></i>
     </span>
-    <span class="main__menu-list" (click)="condition = false">
+    <span class="main__menu-list" [ngClass]="{ 'active': !condition, 'not-active': condition }" (click)="condition = false">
       <i class="fas fa-bars fa-3x"></i>
     </span>
   </div>
