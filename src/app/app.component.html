@@ -11,8 +11,8 @@
       </div>
     </div>
     <div class="header__nav container-row">
-      <div routerLink="/search" routerLinkActive="active" class="header__nav-search">Search</div>
-      <div routerLink="/mylist" routerLinkActive="active" class="header__nav-mylist">My List</div>
+      <div routerLink="/search" routerLinkActive="active" [ngClass]="{ 'active': condition, 'not-active': !condition }" (click)="condition=true" class="header__nav-search">Search</div>
+      <div routerLink="/mylist" routerLinkActive="active" [ngClass]="{ 'active': !condition, 'not-active': condition }" (click)="condition=false" class="header__nav-mylist">My List</div>
     </div>
   </div>
   <router-outlet></router-outlet>
