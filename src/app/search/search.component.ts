@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, DoCheck} from '@angular/core';
 import { ListComponent } from '../list/list.component';
 import { DataService } from '../data.service';
 
@@ -7,10 +7,11 @@ import { DataService } from '../data.service';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent implements OnInit {
-  type = 'repositories';
+export class SearchComponent implements OnInit, DoCheck {
+  type = 'Type';
   language: string;
   query: string;
+  errorSearch = false;
 
   constructor(private dataService: DataService) { }
   langArray: string[] = ['javascript', 'css', 'html',
@@ -20,7 +21,14 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngDoCheck() {
+    this.checkForError();
+  }
+
   clickSearch() {
     this.dataService.getData(this.type, this.language, this.query);
+  }
+  checkForError() {
+    ( this.dataService.error !== '' ) ? this.errorSearch = true : this.errorSearch = false;
   }
 }

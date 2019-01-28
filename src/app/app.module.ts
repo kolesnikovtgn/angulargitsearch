@@ -14,6 +14,7 @@ import { ListComponent } from './list/list.component';
 import { BlockComponent } from './block/block.component';
 import { LineComponent } from './line/line.component';
 import { MyrecordComponent } from './myrecord/myrecord.component';
+import { NofoundComponent } from './nofound/nofound.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MyrecordComponent } from './myrecord/myrecord.component';
     ListComponent,
     BlockComponent,
     LineComponent,
-    MyrecordComponent
+    MyrecordComponent,
+    NofoundComponent
   ],
   imports: [
     BrowserModule,

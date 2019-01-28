@@ -13,5 +13,6 @@
       <button class="search__btn" (click)="clickSearch()"><p class="search__btn-text">SEARCH</p></button>
     </div>
   </div>
-  <app-list></app-list>
+  <app-list *ngIf="!errorSearch"></app-list>
+  <app-nofound *ngIf="errorSearch"></app-nofound>
 </div>

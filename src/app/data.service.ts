@@ -12,11 +12,15 @@ import { RepositoriesService } from './repositories.service';
 export class DataService {
 
   private repos: BehaviorSubject<Repo[]> = new BehaviorSubject([]);
+  public error = '';
 
   constructor(private http: HttpClient, private repositoriesService: RepositoriesService) { }
 
   getData(type, language, query): any {
-    this.repositoriesService.getRepo(type, language, query).subscribe((data: Repo[]) => this.repos.next(data));
+    this.repositoriesService.getRepo(type, language, query).subscribe(
+      (data: Repo[]) => { this.repos.next(data); this.error = ''; },
+        err => this.error = err,
+      );
   }
 
   getRepos(): Observable<Repo[]> {
