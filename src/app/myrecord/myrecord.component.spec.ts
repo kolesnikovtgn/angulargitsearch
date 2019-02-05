@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MyrecordComponent } from './myrecord.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('MyrecordComponent', () => {
   let component: MyrecordComponent;
@@ -8,7 +9,9 @@ describe('MyrecordComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MyrecordComponent ]
+      declarations: [ MyrecordComponent ],
+      imports: [ HttpClientModule ],
+      schemas: [ NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
   }));

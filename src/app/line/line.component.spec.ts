@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 import { LineComponent } from './line.component';
 
@@ -8,7 +9,8 @@ describe('LineComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LineComponent ]
+      declarations: [ LineComponent ],
+      imports: [ HttpClientModule ]
     })
     .compileComponents();
   }));

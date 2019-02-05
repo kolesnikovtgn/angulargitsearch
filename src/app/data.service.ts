@@ -14,7 +14,7 @@ export class DataService {
   private repos: BehaviorSubject<Repo[]> = new BehaviorSubject([]);
   public error = '';
 
-  constructor(private http: HttpClient, private repositoriesService: RepositoriesService) { }
+  constructor(private repositoriesService: RepositoriesService) { }
 
   getData(type, language, query): any {
     this.repositoriesService.getRepo(type, language, query).subscribe(
