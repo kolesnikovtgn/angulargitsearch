@@ -7,7 +7,7 @@ import { DataService } from '../data.service';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent implements OnInit, DoCheck {
+export class SearchComponent implements DoCheck {
   type = 'Type';
   language: string;
   query: string;
@@ -17,9 +17,6 @@ export class SearchComponent implements OnInit, DoCheck {
   langArray: string[] = ['javascript', 'css', 'html',
     'php', 'ruby', 'c++', 'python', 'c#',
     'java', 'go', 'haskel'];
-
-  ngOnInit() {
-  }
 
   ngDoCheck() {
     this.checkForError();

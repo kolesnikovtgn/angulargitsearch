@@ -6,4 +6,6 @@ export class Repo {
   stargazers_count: number;
   searchLanguage: string[];
   myList: boolean;
+  langSearch: string;
+  querySearch: string;
 }
