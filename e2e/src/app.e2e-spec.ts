@@ -1,16 +1,17 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
-describe('workspace-project App', () => {
+describe('workspace-project angulargitsearch', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should redirect to search', async () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to angulargitsearch!');
+    const url = await browser.getCurrentUrl();
+    expect(url).toContain('/search');
   });
 
   afterEach(async () => {
