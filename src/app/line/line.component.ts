@@ -11,7 +11,7 @@ export class LineComponent implements OnInit {
 
   constructor(private  dataService: DataService) { }
 
-  @Input() repositories: Repo[] = [];
+  @Input() repositories: Repo;
   ngOnInit() {
   }
 

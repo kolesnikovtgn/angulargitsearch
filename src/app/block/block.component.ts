@@ -9,7 +9,7 @@ import { DataService } from '../data.service';
 })
 export class BlockComponent implements OnInit {
 
-  @Input() repositories: Repo[] = [];
+  @Input() repositories: Repo;
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
