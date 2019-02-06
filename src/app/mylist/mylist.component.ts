@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ListComponent } from '../list/list.component';
+import { Repo } from '../repo';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-mylist',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MylistComponent implements OnInit {
 
-  constructor() { }
+  repositories: Repo[] = [];
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.getData();
+  }
+  getData() {
+    this.dataService.getRepos().subscribe(data => this.repositories = data);
   }
 
 }

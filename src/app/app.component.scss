@@ -61,25 +61,35 @@ $header_text2-theme: #B3BCC7;
 .header__nav {
   margin: 20px 31px 0 0;
   &-search {
+    outline: none;
     margin-right: 19px;
-    color: $header_text1-theme;
     font-weight: bold;
     font-size: 1.6rem;
   }
   &-mylist {
-    color: $header_text2-theme;
+    outline: none;
     font-size: 1.6rem;
   }
 }
 
 .footer {
   background-color: $header-theme;
+  margin-top: 20px;
   &__text {
     color: $header_text1-theme;
     height: 40px;
+    font-size: 1.45rem;
     display: flex;
     align-items: center;
     justify-content: center;
 
   }
+}
+
+.active {
+  color: $header_text1-theme;
+}
+
+.not-active {
+  color: $header_text2-theme;
 }

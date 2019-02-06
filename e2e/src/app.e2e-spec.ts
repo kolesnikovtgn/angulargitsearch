@@ -1,23 +1,37 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
-describe('workspace-project App', () => {
+describe('project angulargitsearch', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('be supposed to redirect to search', async () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to angulargitsearch!');
+    const url = await browser.getCurrentUrl();
+    expect(url).toContain('/search');
   });
 
-  afterEach(async () => {
-    // Assert that there are no errors emitted from the browser
-    const logs = await browser.manage().logs().get(logging.Type.BROWSER);
-    expect(logs).not.toContain(jasmine.objectContaining({
-      level: logging.Level.SEVERE,
-    }));
+  it('be supposed to not send request if not filled fields', () => {
+    page.clickSearchButton();
+    expect(page.isNoResponse()).toBeTruthy('no response - get page');
+  });
+
+  it('be supposed to fill fields for send request and get response', () => {
+    page.clickType();
+    page.sleep(500);
+    page.clickOptionsType();
+    page.sleep(500);
+    page.clickLang();
+    page.sleep(500);
+    page.clickOptionsLang();
+    page.sleep(500);
+    page.inputRequest();
+    page.sleep(500);
+    page.clickSearchButton();
+    page.sleep(500);
+    expect(page.isNoResponse()).toBeFalsy('no response - get page');
   });
 });

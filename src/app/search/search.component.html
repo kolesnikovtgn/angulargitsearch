@@ -1,3 +1,18 @@
-<p>
-  search works!
-</p>
+<div class="main">
+  <div class="search container-row">
+    <select [(ngModel)]="type" class="search__rep">
+      <option>Type</option>
+      <option>repositories</option>
+    </select>
+    <select [(ngModel)]="language" class="search__lang">
+      <option [ngValue]="undefined" hidden selected>Language</option>
+      <option *ngFor="let item of langArray">{{item}}</option>
+    </select>
+    <input [(ngModel)]="query" class="search__input" placeholder="Type here for search" type="text">
+    <div class="q">
+      <button class="search__btn" (click)="clickSearch()"><p class="search__btn-text">SEARCH</p></button>
+    </div>
+  </div>
+  <app-list *ngIf="!errorSearch"></app-list>
+  <app-nofound *ngIf="errorSearch"></app-nofound>
+</div>

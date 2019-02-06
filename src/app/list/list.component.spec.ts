@@ -1,15 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MylistComponent } from './mylist.component';
+import { ListComponent } from './list.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-describe('MylistComponent', () => {
-  let component: MylistComponent;
-  let fixture: ComponentFixture<MylistComponent>;
+describe('ListComponent', () => {
+  let component: ListComponent;
+  let fixture: ComponentFixture<ListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MylistComponent ],
+      declarations: [ ListComponent ],
       imports: [ HttpClientModule ],
       schemas: [ NO_ERRORS_SCHEMA ]
     })
@@ -17,7 +17,7 @@ describe('MylistComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MylistComponent);
+    fixture = TestBed.createComponent(ListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

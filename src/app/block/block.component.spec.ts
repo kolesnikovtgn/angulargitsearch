@@ -1,23 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MylistComponent } from './mylist.component';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { DataService } from '../data.service';
+import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 
-describe('MylistComponent', () => {
-  let component: MylistComponent;
-  let fixture: ComponentFixture<MylistComponent>;
+import { BlockComponent } from './block.component';
+
+describe('BlockComponent', () => {
+  let component: BlockComponent;
+  let fixture: ComponentFixture<BlockComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MylistComponent ],
+      declarations: [ BlockComponent ],
       imports: [ HttpClientModule ],
-      schemas: [ NO_ERRORS_SCHEMA ]
+      providers: [ DataService, HttpClient ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MylistComponent);
+    fixture = TestBed.createComponent(BlockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
